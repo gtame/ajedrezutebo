@@ -13,6 +13,8 @@ if (show) {
 rotatetext();
 
 
+
+
 showdiv= function(mydiv) {
 
 
@@ -27,11 +29,19 @@ showdiv= function(mydiv) {
 
 showdiv($("#home"));
 
+$("#btninshead").click(function()
+{
+    showdiv($("#inscripciones"));
+});
+
 $("#nvhome").click(function()
 {
     showdiv($("#home"));
 });
-
+$("#nvhome2").click(function()
+{
+    showdiv($("#home"));
+});
 $("#nvins").click(function()
 {
     showdiv($("#inscripciones"));
