@@ -29,6 +29,11 @@ showdiv= function(mydiv) {
 
 showdiv($("#home"));
 
+$("#conins").click(function()
+{
+    alert("funcionalidad no implementada");
+});
+
 $("#btninshead").click(function()
 {
     showdiv($("#inscripciones"));
