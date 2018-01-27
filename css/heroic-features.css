@@ -1,0 +1,36 @@
+/*!
+ * Start Bootstrap - Heroic Features (https://startbootstrap.com/template-overviews/heroic-features)
+ * Copyright 2013-2017 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-heroic-features/blob/master/LICENSE)
+ */
+
+body {
+  padding-top: 54px;
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 56px;
+  }
+}
+
+.card {
+  height: 100%;
+}
+
+
+.agenda
+{
+padding: 5px;
+margin: 20 px;
+margin-left: 20px;
+min-height: 300px;
+margin-top: 30px;
+}
+
+.backsplash
+{
+  background-image: url('/assets/img/blancasvsnegras.png');
+  background-repeat: no-repeat;
+  background-color: white;
+}
