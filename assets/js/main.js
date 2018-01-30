@@ -21,7 +21,8 @@ showdiv= function(mydiv) {
    $("#inscripciones").hide();
    $("#agenda").hide();
    $("#contactar").hide();
-
+   $("#mapa").hide();
+   $("#pano").hide();
    if (mydiv!=null) mydiv.show();
 
 
@@ -54,6 +55,13 @@ $("#nvhome").click(function()
 {
     showdiv($("#home"));
 });
+
+$("#nvmap").click(function ()
+{
+    showdiv($("#mapa"));
+    $("#pano").show();
+});
+
 $("#nvhome2").click(function()
 {
     showdiv($("#home"));
@@ -75,39 +83,6 @@ $("#nvcontactar").click(function()
 });
 
 
-$("#btnSubmit").click(function(){
 
-var urlAjax =  "http://localhost/ajedrez/api.php/inscripciones" ;
-
-   var perruzo= {"equipo":"xLOS PERdRUZ3O3S","email":"gabrieltame@yahoo.es","jugador":"jugador1","edad":1,"jugador2":"jugador1","edad2":2,"jugador3":"jugador1","edad3":2,"jugador4":1,"edad4":2,"createdate":"1980-02-12","deletedflag":0,"updatedate":"2017-12-12"};
-    //crear nuevos registro
-$.ajax({
-   type: "POST",
-   url: urlAjax,
-   data: JSON.stringify(perruzo),
-   beforeSend: function() { alert( "Loading..."); },
-   complete: function() { console.log('completed inserted'); },
-   success: function(data) { alert("ajax worked" + data); },
-   error: function(data) {alert("ajax error"); },
-   dataType: 'json'
-   });
-
-
-    //consultar inscripcion
-
-   //var trackingJSON = JSON.stringify(tracking_data);
-   
-   urlAjax =  "http://localhost/ajedrez/api.php/inscripciones/1" ;
-
-   $.ajax({
-   type: "GET",
-   url: urlAjax,
-   beforeSend: function() { alert( "Loading..."); },
-   complete: function() { console.log('completed'); },
-   success: function(data) { console.log(JSON.stringify(data)); alert("ajax worked" + data ); },
-   error: function(data) {alert("ajax error"); },
-   dataType: 'json'
-   });
-});
        // action goes here!!
 }); 

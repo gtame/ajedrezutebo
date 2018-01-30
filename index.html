@@ -56,6 +56,9 @@
               </a>
             </li>
             <li class="nav-item">
+              <a class="nav-link" href="#" id="nvmap" >Como llegar</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" href="#" id="nvins" >Inscripciones</a>
               </li>
             <li class="nav-item">
@@ -68,6 +71,12 @@
         </div>
 
     </nav>
+
+
+    
+      <div id="mapa"></div>
+      <div id="pano"></div>
+
 
 
     <!-- Page Content -->
@@ -135,7 +144,6 @@
 
 
 
-
     <div id="inscripciones">
 
       <!-- Page Features -->
@@ -144,7 +152,7 @@
 
           <div class="container-contact100">
               <div class="wrap-contact100">
-                <form class="inscripcion-form validate-form">
+                <form class="inscripcion-form validate-form" id="inscripcionform">
                     <div class="row text-left inscripcion-row">
 
 <!-- Datos equipo -->
@@ -153,26 +161,26 @@
        Datos del equipo
       </span>
 
-      <label class="label-input100" for="first-name">Nombre del equipo</label>
-      <div class="wrap-input100  validate-input" data-validate="Type Nombre y apellidos">
-        <input id="first-name" class="input100" type="text" name="first-name" placeholder="Nombre del equipo">
+      <label class="label-input100" for="equipo">Nombre del equipo *</label>
+      <div class="wrap-input100  validate-input" data-validate="Nombre equipo no válido">
+        <input id="equipo" class="input100" type="text" name="equipo" placeholder="Nombre del equipo">
         <span class="focus-input100"></span>
       </div>
 
-      <label class="label-input100" for="first-name">Colegio</label>
-      <div class="wrap-input100  validate-input" data-validate="Type Nombre y apellidos">
-        <input id="first-name" class="input100" type="text" name="first-name" placeholder="Colegio">
+      <label class="label-input100" for="colegio">Colegio *</label>
+      <div class="wrap-input100  validate-input" data-validate="Indicar colegio">
+        <input id="colegio" class="input100" type="text" name="colegio" placeholder="Colegio">
         <span class="focus-input100"></span>
       </div>
 
-      <label class="label-input100" for="email">Enter your email *</label>
-      <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+      <label class="label-input100" for="email">Em@il *</label>
+      <div class="wrap-input100 validate-input" data-validate = "Indicar mail valido: ejemplo@ajedrez.es">
         <input id="email" class="input100" type="text" name="email" placeholder="Eg. example@email.com">
         <span class="focus-input100"></span>
       </div>
 
-      <label class="label-input100" for="phone">Enter phone number</label>
-      <div class="wrap-input100">
+      <label class="label-input100" for="phone">Telefono *</label>
+      <div class="wrap-input100 validate-input" data-validate = "Indicar telefono">
         <input id="phone" class="input100" type="text" name="phone" placeholder="Eg. +1 800 000000">
         <span class="focus-input100"></span>
       </div>
@@ -191,45 +199,46 @@
 
                 
           
-                  <label class="label-input100" for="first-name">Jugador 1</label>
-                  <div class="wrap-input80 rs1-wrap-input100 validate-input" data-validate="Type Nombre y apellidos">
-                    <input id="first-name" class="input100" type="text" name="first-name" placeholder="Nombre y apellidos">
-                    <span class="focus-input100"></span>
-                  </div>
-                  <div class="wrap-input20 rs2-wrap-input100 validate-input" data-validate="Type Edad">
-                    <input class="input100" type="text" name="last-name" placeholder="Edad">
+                  <label class="label-input100" for="jugador1">Jugador 1</label>
+                  <div class="wrap-input80 rs1-wrap-input100 validate-input" data-validate="Nombre y apellidos">
+                    <input id="jugador1" class="input100" type="text" name="jugador1" placeholder="Nombre y apellidos">
                     <span class="focus-input100"></span>
                   </div>
 
-                  <label class="label-input100" for="first-name">Jugador 2</label>
-                  <div class="wrap-input80 rs1-wrap-input100 validate-input" data-validate="Type Nombre y apellidos">
-                    <input id="first-name" class="input100" type="text" name="first-name" placeholder="Nombre y apellidos">
+                  <div class="wrap-input20 rs2-wrap-input100 validate-input" data-validate="Edad">
+                    <input class="input100" type="text" name="edad1" placeholder="Edad">
                     <span class="focus-input100"></span>
                   </div>
-                  <div class="wrap-input20 rs2-wrap-input100 validate-input" data-validate="Type Edad">
-                    <input class="input100" type="text" name="last-name" placeholder="Edad">
+
+                  <label class="label-input100" for="jugador2">Jugador 2</label>
+                  <div class="wrap-input80 rs1-wrap-input100 validate-input" data-validate="Nombre y apellidos">
+                    <input id="jugador2" class="input100" type="text" name="jugador2" placeholder="Nombre y apellidos">
+                    <span class="focus-input100"></span>
+                  </div>
+                  <div class="wrap-input20 rs2-wrap-input100 validate-input" data-validate="Edad">
+                    <input class="input100" type="text" name="edad2" placeholder="Edad">
                     <span class="focus-input100"></span>
                   </div>
                   
 
-                  <label class="label-input100" for="first-name">Jugador 3</label>
-                  <div class="wrap-input80 rs1-wrap-input100 validate-input" data-validate="Type Nombre y apellidos">
-                    <input id="first-name" class="input100" type="text" name="first-name" placeholder="Nombre y apellidos">
+                  <label class="label-input100" for="jugador3">Jugador 3</label>
+                  <div class="wrap-input80 rs1-wrap-input100 validate-input" data-validate="Nombre y apellidos">
+                    <input id="jugador3" class="input100" type="text" name="jugador3" placeholder="Nombre y apellidos">
                     <span class="focus-input100"></span>
                   </div>
-                  <div class="wrap-input20 rs2-wrap-input100 validate-input" data-validate="Type Edad">
-                    <input class="input100" type="text" name="last-name" placeholder="Edad">
+                  <div class="wrap-input20 rs2-wrap-input100 validate-input" data-validate="Edad">
+                    <input class="input100" type="text" name="edad3" placeholder="Edad">
                     <span class="focus-input100"></span>
                   </div>
                   
 
-                  <label class="label-input100" for="first-name">Jugador 4</label>
-                  <div class="wrap-input80 rs1-wrap-input100 validate-input" data-validate="Type Nombre y apellidos">
-                    <input id="first-name" class="input100" type="text" name="first-name" placeholder="Nombre y apellidos">
+                  <label class="label-input100" for="jugador4">Jugador 4</label>
+                  <div class="wrap-input80 rs1-wrap-input100 validate-input" data-validate="Nombre y apellidos">
+                    <input id="jugador4" class="input100" type="text" name="jugador4" placeholder="Nombre y apellidos">
                     <span class="focus-input100"></span>
                   </div>
-                  <div class="wrap-input20 rs2-wrap-input100 validate-input" data-validate="Type Edad">
-                    <input class="input100" type="text" name="last-name" placeholder="Edad">
+                  <div class="wrap-input20 rs2-wrap-input100 validate-input" data-validate="Edad">
+                    <input class="input100" type="text" name="edad4" placeholder="Edad">
                     <span class="focus-input100"></span>
                   </div>
                   
@@ -434,7 +443,11 @@
 <!--===============================================================================================-->
 	<script src="vendor/countdowntime/countdowntime.js"></script>
 <!--===============================================================================================-->
-	<script src="js/main.js"></script>
+  <script src="js/main.js"></script>
+  
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBewl3Rh1dpCR60iOEJgwtZe7DtsUv3bHM&callback=initMap">
+  </script>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
 	<script>
@@ -443,7 +456,27 @@
 	  gtag('js', new Date());
 
 	  gtag('config', 'UA-23581568-13');
-	</script>
+  </script>
+  
+  <script>
+      //Gogle maps
+      function initMap() {
+        var fenway = {lat: 41.711547, lng: -1.00189};
+        var map = new google.maps.Map(document.getElementById('mapa'), {
+          center: fenway,
+          zoom: 14
+        });
+        var panorama = new google.maps.StreetViewPanorama(
+            document.getElementById('pano'), {
+              position: fenway,
+              pov: {
+                heading: 34,
+                pitch: 10
+              }
+            });
+        map.setStreetView(panorama);
+      }
+  </script>
 
 
   </body>
