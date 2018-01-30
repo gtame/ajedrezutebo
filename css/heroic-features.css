@@ -5,9 +5,12 @@
  */
 
 body {
-  padding-top: 54px;
+  padding-top: 27px;
+  min-height: 100%;
 }
 
+ 
+ 
 @media (min-width: 992px) {
   body {
     padding-top: 56px;
@@ -27,6 +30,55 @@ margin-left: 20px;
 min-height: 300px;
 margin-top: 30px;
 }
+
+
+/*todos aañadir margin a los botones*/
+.btn-group-lg>.btn, .btn-lg {
+    margin: 2px;
+}
+
+
+@media (max-width: 992px) {
+
+  .agenda {
+    padding: 2px;
+    margin-top: 60px;
+}
+
+
+
+.lead {
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+
+.display-3 {
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.fa-5x {
+  font-size: 3.0em;
+}
+
+
+.fa-2x {
+  font-size: 1.4em;
+}
+
+.container-contact100{
+  padding: 0px; 
+}
+
+.inscripcion-form {
+     padding: 0px 0px 0px 0px; 
+     margin-bottom: 15px
+}
+
+}
+
+
 
 .backsplash
 {

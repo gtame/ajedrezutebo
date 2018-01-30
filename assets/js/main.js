@@ -17,15 +17,26 @@ rotatetext();
 
 showdiv= function(mydiv) {
 
-
    $("#home").hide(); 
    $("#inscripciones").hide();
    $("#agenda").hide();
    $("#contactar").hide();
 
    if (mydiv!=null) mydiv.show();
-   
+
+
+
 };
+
+$("nav").find("li").on("click", "a", function () {
+    
+    if($('.navbar-toggler').css('display') !='none' && $('navbar-collapse collapse show')!=null)
+    {
+        event.preventDefault();
+        $(".navbar-toggler").trigger( "click" );
+    }
+    
+});
 
 showdiv($("#home"));
 
