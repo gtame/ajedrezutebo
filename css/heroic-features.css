@@ -4,6 +4,37 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-heroic-features/blob/master/LICENSE)
  */
 
+/* clock */
+
+#clockdiv{
+	font-family: sans-serif;
+	color: #fff;
+	display: inline-block;
+	font-weight: 100;
+	text-align: center;
+
+}
+
+#clockdiv > div{
+	padding: 5px;
+	border-radius: 3px;
+	background: #007bff;
+	display: inline-block;
+}
+
+#clockdiv div > span{
+	padding: 15px;
+	border-radius: 3px;
+	background: rgb(2, 0, 129);
+	display: inline-block;
+}
+
+.smalltext{
+	padding-top: 5px;
+	font-size: 16px;
+}
+/*endclock*/
+
 body {
   padding-top: 27px;
   min-height: 100%;
@@ -30,6 +61,7 @@ body {
   width: 100%;
   min-height: calc(50% - 3.5em);
   height: calc(50% - 3.5em);
+  font-size: 20px;
 }
 
 .pt-5, .py-5 {
@@ -41,6 +73,7 @@ body {
 @media (min-width: 992px) {
   body {
     padding-top: 56px;
+    font-size: 30px;
   }
 
   #mapa,#pano  {

@@ -88,8 +88,30 @@
       <!-- Jumbotron Header -->
       <header class="jumbotron my-4 backsplash">
         <h1 class="display-3">Ajedrez es <span id="span1">Divertida|Entrenimiento|Ciencia|Deporte|Amistad|Imaginacion|Creatividad</span></h1>
+        
+        <div id="clockdiv">
+          <div>
+            <span class="days"></span>
+            <div class="smalltext">Dias</div>
+          </div>
+          <div>
+            <span class="hours"></span>
+            <div class="smalltext">Horas</div>
+          </div>
+          <div>
+            <span class="minutes"></span>
+            <div class="smalltext">Min</div>
+          </div>
+          <div>
+            <span class="seconds"></span>
+            <div class="smalltext">Seg</div>
+          </div>
+        </div>
+        
         <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, ipsam, eligendi, in quo sunt possimus non incidunt odit vero aliquid similique quaerat nam nobis illo aspernatur vitae fugiat numquam repellat.</p>
         <a href="#" id="btninshead" class="btn btn-primary btn-lg">Inscribirse!</a>&nbsp;<a href="#" id="conins" class="btn btn-primary btn-lg">Consultar inscritos!</a>
+
+
       </header>
 
       <!-- Page Features -->
@@ -426,8 +448,7 @@
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-    <script src="assets/js/jquery.cycleText.min.js"></script>
-    <script src="assets/js/main.js"></script>
+    
     <!--===============================================================================================-->
 	  <script src="vendor/animsition/js/animsition.min.js"></script>
     <!--===============================================================================================-->
@@ -446,6 +467,8 @@
 <!--===============================================================================================-->
 	<script src="vendor/countdowntime/countdowntime.js"></script>
 <!--===============================================================================================-->
+<script src="assets/js/jquery.cycleText.min.js"></script>
+ <script src="assets/js/main.js"></script>
   <script src="js/main.js"></script>
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
@@ -455,7 +478,9 @@
 	  function gtag(){dataLayer.push(arguments);}
 	  gtag('js', new Date());
 
-	  gtag('config', 'UA-23581568-13');
+    gtag('config', 'UA-23581568-13');
+    
+
   </script>
 
 

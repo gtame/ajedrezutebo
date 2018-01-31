@@ -1,6 +1,7 @@
 
  $(document).ready(function(){
 
+
     // Sticky sidebar
 var rotatetext = function() {
 var show =$('#span1');
