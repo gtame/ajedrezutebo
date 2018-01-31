@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Heroic Features - Start Bootstrap Template</title>
+    <title>Torneo ajedrez Utebo</title>
 
     
   <!--===============================================================================================-->
@@ -42,9 +42,9 @@
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-      <div class="container">
+
           
-        <a class="navbar-brand" href="#"><i class="fas fa-chess fa-2x"></i>&nbsp;I Torneo Ajedrez Utebo</a>
+        <a class="navbar-brand" href="#" id="nvhome2"><i class="fas fa-chess fa-2x"></i>&nbsp;I Torneo Ajedrez Utebo</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -54,6 +54,9 @@
               <a class="nav-link" href="#" id="nvhome" >Home
                 <span class="sr-only">(current)</span>
               </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" id="nvmap" >Como llegar</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#" id="nvins" >Inscripciones</a>
@@ -66,364 +69,75 @@
             </li>
           </ul>
         </div>
-      </div>
+
     </nav>
 
-    <!-- Page Content -->
-    <div class="container">
-
-
-  <div id="home">
-
-      <!-- Jumbotron Header -->
-      <header class="jumbotron my-4 backsplash">
-        <h1 class="display-3">Ajedrez es <span id="span1">Divertida|Entrenimiento|Ciencia|Deporte|Amistad|Imaginacion|Meditacion</span></h1>
-        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, ipsam, eligendi, in quo sunt possimus non incidunt odit vero aliquid similique quaerat nam nobis illo aspernatur vitae fugiat numquam repellat.</p>
-        <a href="#" class="btn btn-primary btn-lg">Inscribirse!</a>&nbsp;<a href="#" class="btn btn-primary btn-lg">Consultar inscritos!</a>
-      </header>
-
-      <!-- Page Features -->
-      <div class="row text-center">
-
-        <div class="col-lg-3 col-md-6 mb-4">
-          <div class="card">
-            <img class="card-img-top" src="assets/img/peon_negro_small.png" alt="">
-            <div class="card-body">
-              <h4 class="card-title">Card title</h4>
-              
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 mb-4">
-          <div class="card">
-            <img class="card-img-top" src="assets/img/chesskids_small.png" alt="">
-            <div class="card-body">
-              <h4 class="card-title">Card title</h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo magni sapiente, tempore debitis beatae culpa natus architecto.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 mb-4">
-          <div class="card">
-            <img class="card-img-top" src="assets/img/peon_transparente_small.png" alt="">
-            <div class="card-body">
-              <h4 class="card-title">Card title</h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-6 mb-4">
-          <div class="card">
-            <img class="card-img-top" src="assets/img/torneo_small.png" alt="">
-            <div class="card-body">
-              <h4 class="card-title">Card title</h4>
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo magni sapiente, tempore debitis beatae culpa natus architecto.</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-
-
-
-    </div>
-
-
-
-    <div id="inscripciones">
-
-      <!-- Page Features -->
-      <div class="row text-left">
-
-
-          <div class="container-contact100">
-              <div class="wrap-contact100">
-                <form class="contact100-form validate-form">
-                  <span class="contact100-form-title">
-                    Inscribir equipo
-                  </span>
-          
-                  <label class="label-input100" for="first-name">Nombre equipo</label>
-                  <div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="Type first name">
-                    <input id="first-name" class="input100" type="text" name="first-name" placeholder="First name">
-                    <span class="focus-input100"></span>
-                  </div>
-                  <div class="wrap-input100 rs2-wrap-input100 validate-input" data-validate="Type last name">
-                    <input class="input100" type="text" name="last-name" placeholder="Last name">
-                    <span class="focus-input100"></span>
-                  </div>
-                  <div class="wrap-input100 rs3-wrap-input100 validate-input" data-validate="Type last name">
-                      <input class="input100" type="text" name="last-name" placeholder="Last name">
-                      <span class="focus-input100"></span>
-                    </div>
-          
-                  <label class="label-input100" for="email">Enter your email *</label>
-                  <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-                    <input id="email" class="input100" type="text" name="email" placeholder="Eg. example@email.com">
-                    <span class="focus-input100"></span>
-                  </div>
-          
-                  <label class="label-input100" for="phone">Enter phone number</label>
-                  <div class="wrap-input100">
-                    <input id="phone" class="input100" type="text" name="phone" placeholder="Eg. +1 800 000000">
-                    <span class="focus-input100"></span>
-                  </div>
-          
-                  <label class="label-input100" for="message">Message *</label>
-                  <div class="wrap-input100 validate-input" data-validate = "Message is required">
-                    <textarea id="message" class="input100" name="message" placeholder="Write us a message"></textarea>
-                    <span class="focus-input100"></span>
-                  </div>
-          
-                  <div class="container-contact100-form-btn">
-                    <button class="contact100-form-btn">
-                      Send Message
-                    </button>
-                  </div>
-                </form>
-          
-                <div class="contact100-more flex-col-c-m" style="background-image: url('images/bg-01.jpg');">
-                  <div class="flex-w size1 p-b-47">
-                    <div class="txt1 p-r-25">
-                      <span class="lnr lnr-map-marker"></span>
-                    </div>
-          
-                    <div class="flex-col size2">
-                      <span class="txt1 p-b-20">
-                        Address
-                      </span>
-          
-                      <span class="txt2">
-                        Mada Center 8th floor, 379 Hudson St, New York, NY 10018 US
-                      </span>
-                    </div>
-                  </div>
-          
-                  <div class="dis-flex size1 p-b-47">
-                    <div class="txt1 p-r-25">
-                      <span class="lnr lnr-phone-handset"></span>
-                    </div>
-          
-                    <div class="flex-col size2">
-                      <span class="txt1 p-b-20">
-                        Lets Talk
-                      </span>
-          
-                      <span class="txt3">
-                        +1 800 1236879
-                      </span>
-                    </div>
-                  </div>
-          
-                  <div class="dis-flex size1 p-b-47">
-                    <div class="txt1 p-r-25">
-                      <span class="lnr lnr-envelope"></span>
-                    </div>
-          
-                    <div class="flex-col size2">
-                      <span class="txt1 p-b-20">
-                        General Support
-                      </span>
-          
-                      <span class="txt3">
-                        contact@example.com
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          
-          
-          
-            <div id="dropDownSelect1"></div>
-
-          <!-- /.row -->
-      </div>
-        <!-- /.row -->
-    </div>
-    <!-- /.container -->
-
-
-    <div id="agenda">
-
-        <!-- Page Features -->
-        <div class="row text-center">
-  
-            Agenda
-        </div>
-          <!-- /.row -->
-      </div>
-      <!-- /.container -->
-
-      
-      <!-- Contactar -->
-
-      <div id="contactar">
-
-          <!-- Page Features -->
-          <div class="row text-left">
-    
-              <div class="container-contact100">
-                  <div class="wrap-contact100">
-                    <form class="contact100-form validate-form">
-                      <span class="contact100-form-title">
-                        Send Us A Message
-                      </span>
-              
-                      <label class="label-input100" for="first-name">Tell us your name *</label>
-                      <div class="wrap-input100 rs1-wrap-input100 validate-input" data-validate="Type first name">
-                        <input id="first-name" class="input100" type="text" name="first-name" placeholder="First name">
-                        <span class="focus-input100"></span>
-                      </div>
-                      <div class="wrap-input100 rs2-wrap-input100 validate-input" data-validate="Type last name">
-                        <input class="input100" type="text" name="last-name" placeholder="Last name">
-                        <span class="focus-input100"></span>
-                      </div>
-              
-                      <label class="label-input100" for="email">Enter your email *</label>
-                      <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-                        <input id="email" class="input100" type="text" name="email" placeholder="Eg. example@email.com">
-                        <span class="focus-input100"></span>
-                      </div>
-              
-                      <label class="label-input100" for="phone">Enter phone number</label>
-                      <div class="wrap-input100">
-                        <input id="phone" class="input100" type="text" name="phone" placeholder="Eg. +1 800 000000">
-                        <span class="focus-input100"></span>
-                      </div>
-              
-                      <label class="label-input100" for="message">Message *</label>
-                      <div class="wrap-input100 validate-input" data-validate = "Message is required">
-                        <textarea id="message" class="input100" name="message" placeholder="Write us a message"></textarea>
-                        <span class="focus-input100"></span>
-                      </div>
-              
-                      <div class="container-contact100-form-btn">
-                        <button class="contact100-form-btn">
-                          Send Message
-                        </button>
-                      </div>
-                    </form>
-              
-                    <div class="contact100-more flex-col-c-m" style="background-image: url('images/bg-01.jpg');">
-                      <div class="flex-w size1 p-b-47">
-                        <div class="txt1 p-r-25">
-                          <span class="lnr lnr-map-marker"></span>
-                        </div>
-              
-                        <div class="flex-col size2">
-                          <span class="txt1 p-b-20">
-                            Address
-                          </span>
-              
-                          <span class="txt2">
-                            Mada Center 8th floor, 379 Hudson St, New York, NY 10018 US
-                          </span>
-                        </div>
-                      </div>
-              
-                      <div class="dis-flex size1 p-b-47">
-                        <div class="txt1 p-r-25">
-                          <span class="lnr lnr-phone-handset"></span>
-                        </div>
-              
-                        <div class="flex-col size2">
-                          <span class="txt1 p-b-20">
-                            Lets Talk
-                          </span>
-              
-                          <span class="txt3">
-                            +1 800 1236879
-                          </span>
-                        </div>
-                      </div>
-              
-                      <div class="dis-flex size1 p-b-47">
-                        <div class="txt1 p-r-25">
-                          <span class="lnr lnr-envelope"></span>
-                        </div>
-              
-                        <div class="flex-col size2">
-                          <span class="txt1 p-b-20">
-                            General Support
-                          </span>
-              
-                          <span class="txt3">
-                            contact@example.com
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              
-              
-              
-                <div id="dropDownSelect1"></div>
-          </div>
-            <!-- /.row -->
-        </div>
-        <!-- /.container -->
-    
-
-
-
 
     
-    
-        <!-- Footer -->
-    <footer class="py-5 bg-dark">
-      <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2018</p>
-      </div>
-      <!-- /.container -->
-    </footer>
-    <div class="bg-dark">
-      
-    </div>
+      <div id="mapa"></div>
+      <div id="pano"></div>
+
+
+
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
     <script src="assets/js/jquery.cycleText.min.js"></script>
-    <script src="assets/js/main.js"></script>
+    <!--<script src="assets/js/main.js"></script>-->
     <!--===============================================================================================-->
 	  <script src="vendor/animsition/js/animsition.min.js"></script>
     <!--===============================================================================================-->
 	  <script src="vendor/bootstrap/js/popper.js"></script>
-    <!--===============================================================================================-->
-	  <script src="vendor/select2/select2.min.js"></script>
-    <script>
-		  $(".selection-2").select2({
-			  minimumResultsForSearch: 20,
-			  dropdownParent: $('#dropDownSelect1')
-		  });
-	  </script>
-<!--===============================================================================================-->
-	<script src="vendor/daterangepicker/moment.min.js"></script>
-	<script src="vendor/daterangepicker/daterangepicker.js"></script>
-<!--===============================================================================================-->
-	<script src="vendor/countdowntime/countdowntime.js"></script>
-<!--===============================================================================================-->
-	<script src="js/main.js"></script>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
+<script>
 
-	  gtag('config', 'UA-23581568-13');
-	</script>
+  var map =null;
+  var panorama=null;
+  
+    //Gogle maps
+    function initMap() {
+      var fenway = {lat: 41.711547, lng: -1.00189};
+      
+          
+      var marker = new google.maps.Marker({
+        position: fenway,
+        title:"Pabellon"});
+        
+        map = new google.maps.Map(document.getElementById('mapa'), {
+          center: fenway,
+          zoom: 14
+        });
+        panorama = new google.maps.StreetViewPanorama(
+            document.getElementById('pano'), {
+              position: fenway,
+              pov: {
+                heading: 34,
+                pitch: 8
+              }
+            });
+        marker.setMap(map);	
+  
+        map.setStreetView(panorama);
+  
+  
+  
+        google.maps.event.trigger(map, 'resize');
+        map.setCenter(fenway);
+  
+        google.maps.event.trigger(panorama, 'resize');
+        map.setCenter(fenway);
+        
+     }	
+  
+  
+  
+  </script>
+  
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBewl3Rh1dpCR60iOEJgwtZe7DtsUv3bHM&callback=initMap">
+  </script>
 
-
-  </body>
+  
+</body>
 
 </html>

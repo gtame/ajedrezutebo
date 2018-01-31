@@ -7,6 +7,7 @@
 body {
   padding-top: 27px;
   min-height: 100%;
+  background-color: #343a40!important
 }
 
 
@@ -14,10 +15,28 @@ body {
   min-height: calc(100% - 7.5em);
   height: calc(100% - 7.5em);
   width: 49%;
-  display: inline-block;
+  
+  /*display:none;*/
  }
 
+ .container
+ {
+   background-color: white;
+ }
  
+@media (max-width:768px) {
+  #mapa,#pano {
+  display: block;
+  width: 100%;
+  min-height: calc(50% - 3.5em);
+  height: calc(50% - 3.5em);
+}
+
+.pt-5, .py-5 {
+    padding-top: 1rem!important;
+    padding-bottom: 1rem!important;
+}
+}
  
 @media (min-width: 992px) {
   body {
@@ -25,6 +44,7 @@ body {
   }
 
   #mapa,#pano  {
+    display: inline-block;
     margin-top: 0px;
   }
 }

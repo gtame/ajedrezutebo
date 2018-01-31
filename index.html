@@ -417,8 +417,11 @@
         <p class="m-0 text-center text-white">Copyright &copy; GTB Website 2018</p>
       <!-- /.container -->
     </footer>
-
-
+<!-- google maps -->
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBewl3Rh1dpCR60iOEJgwtZe7DtsUv3bHM">
+    </script>
+    
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -454,57 +457,6 @@
 
 	  gtag('config', 'UA-23581568-13');
   </script>
-  
-<script>
-
-var map =null;
-var panorama=null;
-
-  //Gogle maps
-  function initMap() {
-    var fenway = {lat: 41.711547, lng: -1.00189};
-    
-    		
-		var marker = new google.maps.Marker({
-			position: fenway,
-      title:"Pabellon"});
-      
-      map = new google.maps.Map(document.getElementById('mapa'), {
-        center: fenway,
-        zoom: 14
-      });
-      panorama = new google.maps.StreetViewPanorama(
-          document.getElementById('pano'), {
-            position: fenway,
-            pov: {
-              heading: 34,
-              pitch: 8
-            }
-          });
-      marker.setMap(map);	
-
-      map.setStreetView(panorama);
-
-
-
-      google.maps.event.trigger(map, 'resize');
-      map.setCenter(fenway);
-
-      google.maps.event.trigger(panorama, 'resize');
-      map.setCenter(fenway);
- 
-
-      $("#mapa").width($("#mapa").width()-1);
-      $("#pano").width($("#pano").width()-1);
-   }	
-
-
-
-</script>
-
-<script async defer
-src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBewl3Rh1dpCR60iOEJgwtZe7DtsUv3bHM&callback=initMap">
-</script>
 
 
 
