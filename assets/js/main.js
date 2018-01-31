@@ -14,7 +14,6 @@ rotatetext();
 
 
 
-
 showdiv= function(mydiv) {
 
    $("#home").hide(); 
@@ -60,7 +59,10 @@ $("#nvmap").click(function ()
 {
     showdiv($("#mapa"));
     $("#pano").show();
+
+    
 });
+
 
 $("#nvhome2").click(function()
 {

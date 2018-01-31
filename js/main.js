@@ -16,8 +16,7 @@ function toJSONString( form ) {
     for( var i = 0; i < elements.length; ++i ) {
         var element = elements[i];
         var name = element.name;
-        var value = element.value;
-
+        var value = element.value; 
         if( name ) {
             obj[ name ] = value;
         }
@@ -213,7 +212,6 @@ function showMessage()
         $(thisAlert).removeClass('alert-validate');
     }
     
-
 
 
 })(jQuery);

@@ -9,8 +9,10 @@ body {
   min-height: 100%;
 }
 
+
 #mapa,#pano {
   min-height: calc(100% - 7.5em);
+  height: calc(100% - 7.5em);
   width: 49%;
   display: inline-block;
  }
