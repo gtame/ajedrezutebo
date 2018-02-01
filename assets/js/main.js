@@ -61,6 +61,7 @@ showdiv= function(mydiv) {
    $("#contactar").hide();
    $("#mapa").hide();
    $("#pano").hide();
+   $("#inscritos").hide();
    if (mydiv!=null) mydiv.show();
 
 
@@ -81,7 +82,7 @@ showdiv($("#home"));
 
 $("#conins").click(function()
 {
-    alert("funcionalidad no implementada");
+    showdiv($("#inscritos"));
 });
 
 $("#btninshead").click(function()
@@ -126,10 +127,7 @@ $("#nvcontactar").click(function()
 });
 
 
-$("#buscarins").click(function()
-{
-    alert('tiraaaaa');
-});
+
 
        // action goes here!!
 }); 

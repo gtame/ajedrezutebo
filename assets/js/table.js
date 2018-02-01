@@ -1,4 +1,3 @@
-
 function Table() {
     //sets attributes
     this.header = [];
@@ -84,11 +83,6 @@ var data = {
 var table = new Table();
     
 //sets table data and builds it
-table
-    .setHeader(data.k)
-    .setData(data.v)
-    .setTableClass('sean')
-    .build();
 
 
 
@@ -96,6 +90,42 @@ table
 
 $("#buscarins").click(function()
 {
+
+    
+    //consultar inscripcion
+    var value=$( "#txtbuscar" ).val();
+
+    //var trackingJSON = JSON.stringify(tracking_data);
+    var urlAjax =  "http://127.0.0.1/ajedrez/api.php/inscripciones?filter[]=equipo,cs," + encodeURI(value) + 
+    "&filter[]=jugador1,cs,"+ encodeURI(value) +
+    "&filter[]=jugador2,cs,"+ encodeURI(value) +
+    "&filter[]=jugador3,cs,"+ encodeURI(value) +
+    "&filter[]=jugador4,cs,"+ encodeURI(value) +
+    "&satisfy=any" ;
+          
+    console.log(urlAjax);
+    $.ajax({
+    type: "GET",
+    url: urlAjax,
+    beforeSend: function() { alert( "Loading..."); },
+    complete: function() { console.log('completed'); },
+    success: function(data) { console.log(JSON.stringify(data));
+        if (data!=null && data.inscripciones.records.length>0)
+        {
+           data.v.clean();
+          data.v.append({  data.inscripciones.records[1], data.inscripciones.records[3]});
+        }
+    },
+    error: function(data) {alert("ajax error"); },
+    dataType: 'json'
+    });
+
+
     table.clean();
+    table
+    .setHeader(data.k)
+    .setData(data.v)
+    .setTableClass('sean')
+    .build();
 
 });

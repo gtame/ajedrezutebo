@@ -6,6 +6,8 @@
 
 /* clock */
 
+
+
 #clockdiv{
 	font-family: sans-serif;
 	color: #fff;
@@ -37,6 +39,11 @@
 
 
 /*table*/
+
+.table-container
+{
+  display:block;
+}
 
 #clasif table {
   font-family: Arial, sans-serif;
@@ -78,7 +85,25 @@ search textbox
   z-index: 2;
   color: red;
 }
+
+.form-group
+{
+  margin-right: 10px;
+}
 /* endsearch*/
+
+
+.container
+{
+  padding: 1em;
+  min-height: calc(100% - 2.5em);
+
+}
+
+.row
+{
+  padding: 1em;
+}
 
 body {
   padding-top: 27px;
