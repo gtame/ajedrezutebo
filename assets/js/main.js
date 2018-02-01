@@ -126,6 +126,10 @@ $("#nvcontactar").click(function()
 });
 
 
+$("#buscarins").click(function()
+{
+    alert('tiraaaaa');
+});
 
        // action goes here!!
 }); 

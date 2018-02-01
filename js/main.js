@@ -40,7 +40,7 @@ function showMessage()
             
             
 
-            var urlAjax =  "http://localhost/ajedrez/api.php/inscripciones?filter=equipo,eq," + encodeURI(this.value) ;
+            var urlAjax =  "http://127.0.0.1:8080/edsa-ajedrez/api.php/inscripciones?filter=equipo,eq," + encodeURI(this.value) ;
             
             $.ajax({
             type: "GET",
@@ -64,7 +64,7 @@ function showMessage()
         {
             debugger; 
             //Si pasa las validaciones llamada al servicio
-            var urlAjax =  "http://localhost/ajedrez/api.php/inscripciones" ;
+            var urlAjax =  "http://127.0.0.1:8080/edsa-ajedrez/api.php/inscripciones" ;
             var inscriptionData=JSON.parse(toJSONString(this));
             Object.assign(inscriptionData,  {"createdate":"1980-02-12","deletedflag":0,"updatedate":"2017-12-12"});
             
@@ -128,7 +128,7 @@ function showMessage()
 
           if (validateform(inputscontact))
           {
-            var urlAjax =  "http://localhost/ajedrez/mail.php" ;
+            var urlAjax =  "http://127.0.0.1:8080/edsa-ajedrez/mail.php" ;
             var messageData=JSON.parse(toJSONString(this));
             //Llamamos api rest. 
 
