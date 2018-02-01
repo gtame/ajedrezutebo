@@ -128,7 +128,7 @@ function showMessage()
 
           if (validateform(inputscontact))
           {
-            var urlAjax =  "http://127.0.0.1:8080/edsa-ajedrez/mail.php" ;
+            var urlAjax =  "http://127.0.0.1/ajedrez/mail.php" ;
             var messageData=JSON.parse(toJSONString(this));
             //Llamamos api rest. 
 

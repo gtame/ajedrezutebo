@@ -1,8 +1,8 @@
-
 function Table() {
     //sets attributes
     this.header = [];
     this.data = [[]];
+    this.class =[];
     this.tableClass = ''
 }
 
@@ -17,6 +17,13 @@ Table.prototype.setData = function(data) {
     this.data = data;
     return this;
 }
+
+Table.prototype.setClass = function(data) {
+    //sets the main data
+    this.class = data;
+    return this;
+}
+
 
 Table.prototype.setTableClass = function(tableClass) {
     //sets the table class name
@@ -45,22 +52,25 @@ Table.prototype.build = function(container) {
 
     var header = tr.clone(); //creates header row
 
+    
     //fills header row
     this.header.forEach(function(d) {
         header.append(th.clone().text(d));
-    });
 
+    });
+ 
     //attaches header row
     table.append($('<thead></thead>').append(header));
     
     //creates 
     var tbody = $('<tbody></tbody>');
 
+    let value=this.class;
     //fills out the table body
-    this.data.forEach(function(d) {
+    this.data.forEach(function(d,n,value) {
         var row = tr.clone(); //creates a row
         d.forEach(function(e,j) {
-            row.append(td.clone().text(e)); //fills in the row
+            row.append(td.clone().width(value[n]).html(e)); //fills in the row
         });
         tbody.append(row); //puts row on the tbody
     });
@@ -73,29 +83,77 @@ Table.prototype.build = function(container) {
 //sample data
 var data = {
     k: ['Equipo', 'Jugadores'],
-    v: [['Chandler', 'IT Procurement Manager'],
-        ['Joey', 'Out-of-work Actor'],
-        ['Monica', 'Chef'],
-        ['Rachel', 'Assistant Buyer'],
-        ['Ross', 'Dinosaurs']]
+    j: ['33%','66%'],
+    v: []
 };
 
 //creates new table object
 var table = new Table();
     
 //sets table data and builds it
-table
-    .setHeader(data.k)
-    .setData(data.v)
-    .setTableClass('sean')
-    .build();
 
 
 
-    
+function format (val, num)
+{
+    return '<li><span class="fa-li"><i class="fas fa-user"></i></span>'+val+'(' + num + ')</li>'
+}
 
 $("#buscarins").click(function()
 {
-    table.clean();
+
+    
+    //consultar inscripcion
+    var value=$( "#txtbuscar" ).val();
+
+    //var trackingJSON = JSON.stringify(tracking_data);
+    var urlAjax =  "http://127.0.0.1:8080/edsa-ajedrez/api.php/inscripciones?filter[]=equipo,cs," + encodeURI(value) + 
+    "&filter[]=jugador1,cs,"+ encodeURI(value) +
+    "&filter[]=jugador2,cs,"+ encodeURI(value) +
+    "&filter[]=jugador3,cs,"+ encodeURI(value) +
+    "&filter[]=jugador4,cs,"+ encodeURI(value) +
+    "&satisfy=any" ;
+          
+    console.log(urlAjax);
+    $.ajax({
+    type: "GET",
+    url: urlAjax,
+    beforeSend: function() { table.clean(); },
+    complete: function() { console.log('completed'); },
+    success: function(result) { console.log(JSON.stringify(result));
+        data.v= [];
+        if (result!=null && result.inscripciones.records.length>0)
+        {
+            for (let ins of result.inscripciones.records) {
+                //Filas de la tabla
+                data.v.push(
+                [ 
+                    '<i class="fas fa-chess-rook fa-2x"></i>'+ins[1],
+                    '<ul class="fa-ul">'+
+                    format(ins[3],ins[4]) +
+                    format(ins[5],ins[6]) +
+                    format(ins[7],ins[8]) +
+                    format(ins[9],ins[10]) +
+                    '</ul>'
+                ]);
+              }
+            
+            
+        }
+
+        table.clean();
+        table
+        .setHeader(data.k)
+        .setClass (data.j)
+        .setData(data.v)
+        //.setTableClass('sean')
+        .build();
+    
+    },
+    error: function(data) {alert("ajax error"); },
+    dataType: 'json'
+    });
+
+
 
 });

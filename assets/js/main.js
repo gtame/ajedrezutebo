@@ -55,12 +55,14 @@ var map =null;
   
 showdiv= function(mydiv) {
 
+    $("#mapa").hide();
+    $("#pano").hide();
+   $("#contenedor").show();
    $("#home").hide(); 
    $("#inscripciones").hide();
    $("#agenda").hide();
    $("#contactar").hide();
-   $("#mapa").hide();
-   $("#pano").hide();
+   $("#inscritos").hide();
    if (mydiv!=null) mydiv.show();
 
 
@@ -77,15 +79,21 @@ $("nav").find("li").on("click", "a", function () {
     
 });
 
-showdiv($("#home"));
+showdiv($("#inscritos"));
 
 $("#conins").click(function()
 {
-    alert("funcionalidad no implementada");
+    showdiv($("#inscritos"));
+});
+
+$("#conins2").click(function()
+{
+    showdiv($("#inscritos"));
 });
 
 $("#btninshead").click(function()
 {
+    
     showdiv($("#inscripciones"));
 });
 
@@ -98,7 +106,9 @@ $("#nvmap").click(function ()
 {
     if (map==null)
         initMap();
-    showdiv($("#mapa"));
+
+    $('#contenedor').hide();
+    $("#mapa").show();
     $("#pano").show();
 
     
@@ -125,11 +135,6 @@ $("#nvcontactar").click(function()
     showdiv($("#contactar"));
 });
 
-
-$("#buscarins").click(function()
-{
-    alert('tiraaaaa');
-});
 
        // action goes here!!
 }); 
