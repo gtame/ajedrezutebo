@@ -65,7 +65,7 @@ Table.prototype.build = function(container) {
     //creates 
     var tbody = $('<tbody></tbody>');
 
-    let value=this.class;
+    var value=this.class;
     //fills out the table body
     this.data.forEach(function(d,n,value) {
         var row = tr.clone(); //creates a row
@@ -94,7 +94,7 @@ var table = new Table();
 
 
 
-function format (val, num)
+function formatUl (val, num)
 {
     return '<li><span class="fa-li"><i class="fas fa-user"></i></span>'+val+'(' + num + ')</li>'
 }
@@ -124,19 +124,20 @@ $("#buscarins").click(function()
         data.v= [];
         if (result!=null && result.inscripciones.records.length>0)
         {
-            for (let ins of result.inscripciones.records) {
+             result.inscripciones.records.forEach(function(ins)
+             {
                 //Filas de la tabla
                 data.v.push(
                 [ 
                     '<i class="fas fa-chess-rook fa-2x"></i>'+ins[1],
                     '<ul class="fa-ul">'+
-                    format(ins[3],ins[4]) +
-                    format(ins[5],ins[6]) +
-                    format(ins[7],ins[8]) +
-                    format(ins[9],ins[10]) +
+                    formatUl(ins[3],ins[4]) +
+                    formatUl(ins[5],ins[6]) +
+                    formatUl(ins[7],ins[8]) +
+                    formatUl(ins[9],ins[10]) +
                     '</ul>'
                 ]);
-              }
+              });
             
             
         }

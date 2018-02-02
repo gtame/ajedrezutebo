@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var browserSync = require('browser-sync').create();
+var gutil = require('gulp-util');
 var pkg = require('./package.json');
 var uglify = require('gulp-uglify');
 var pump = require('pump');
@@ -7,7 +8,7 @@ var concat = require('gulp-concat');
 var htmlmin = require('gulp-htmlmin');
 var cssnano = require('gulp-cssnano');
 var gulpCopy = require('gulp-copy');
-
+var flatten = require('gulp-flatten');
 // Copy third party libraries from /node_modules into /vendor
 gulp.task('vendor', function() {
 
@@ -57,7 +58,7 @@ gulp.task('dev', ['browserSync'], function() {
  
 gulp.task('compressHtml',function()
 {
-  return gulp.src('index_prod.html')
+  return gulp.src('index.html')
   .pipe(htmlmin({collapseWhitespace: true,removeComments: true}))
   .pipe(gulp.dest('dist'));
 
@@ -75,16 +76,23 @@ gulp.task('compressCSS',function()
 //compress
 gulp.task('compressJS', function () {
 
-        //js
-        gulp.src(['./assets/js/*.js','js/main.js','./vendor/countdowntime/countdowntime.js','./vendor/bootstrap/js/bootstrap.bundle.min.js','vendor/jquery/jquery.min.js'])
-        .pipe(concat('all.js'))
+  
+        //js unificados
+        gulp.src(['assets/js/main.js','assets/js/jquery.cycleText.min.js','js/main.js','assets/js/table.js'])
+      
         .pipe(uglify())
-        .pipe(gulp.dest('dist')
-        //css
+        .on('error', function (err) { gutil.log(gutil.colors.red('[Error]'), err.toString()); })
+        .pipe(concat('all.js'))
+        .pipe(gulp.dest('dist/assets/js/'));
+        //js tal cual
+
+   
+        
+
+        gulp.src(['vendor/jquery/jquery.min.js','vendor/bootstrap/js/bootstrap.bundle.min.js'])
+        .pipe(gulp.dest('dist/assets/js'));
 
 
-
-  );
 });
  
 
@@ -107,9 +115,11 @@ gulp.task('compress', function () {
   .pipe(gulpCopy('dist/'));
 
 
-  gulp.src(['images/icons/*'])
+  gulp.src('favicon.ico')
   .pipe(gulpCopy('dist/'));
 
+  gulp.src('api.php')
+  .pipe(gulp.dest('dist/'));
 
 });
 
