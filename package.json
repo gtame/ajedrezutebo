@@ -36,8 +36,10 @@
     "gulp-concat": "^2.6.1",
     "gulp-copy": "^1.1.0",
     "gulp-cssnano": "^2.1.2",
+    "gulp-flatten": "^0.4.0",
     "gulp-htmlmin": "^4.0.0",
     "gulp-uglify": "^3.0.0",
+    "gulp-util": "^3.0.8",
     "pump": "^3.0.0"
   }
 }

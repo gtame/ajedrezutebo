@@ -18,7 +18,8 @@
 }
 
 #clockdiv > div{
-	padding: 5px;
+  padding: 5px;
+  margin: 2px;
 	border-radius: 3px;
 	background: #007bff;
 	display: inline-block;
@@ -43,6 +44,11 @@
 .table-container
 {
   display:block;
+
+}
+
+table{
+  width: 100%;
 }
 
 #clasif table {
@@ -53,38 +59,29 @@
 th {
   background-color: #0066CC;
   color: white;
+  font-size: 0.8em;
+  padding: 10px;
 }
 td {
   border: 1px solid;
   padding: 5px;
+  font-size: 0.8em;
 }
 
-
+ul {
+  list-style: none;
+  padding: 0;
+}
+li {
+  padding-left: 0.3em;
+}
+ 
 /*endtable*/
 
 /*
 search textbox
 */
 
-.input-group.input-group-unstyled input.form-control {
-  -webkit-border-radius: 4px;
-     -moz-border-radius: 4px;
-          border-radius: 4px;
-}
-.input-group-unstyled .input-group-addon {
-  border-radius: 4px;
-  border: 0px;
-  background-color: transparent;
-}
-
-.errspan {
-  float: right;
-  margin-right: 6px;
-  margin-top: -35px;
-  position: relative;
-  z-index: 2;
-  color: red;
-}
 
 .form-group
 {
@@ -108,7 +105,8 @@ search textbox
 body {
   padding-top: 27px;
   min-height: 100%;
-  background-color: #343a40!important
+  background-color: #343a40!important;
+  height:100%;
 }
 
 
@@ -143,8 +141,15 @@ body {
 @media (min-width: 992px) {
   body {
     padding-top: 56px;
-    font-size: 30px;
+    font-size: 20px;
   }
+
+
+.table-container
+{
+  width: 50%;
+}
+
 
   #mapa,#pano  {
     display: inline-block;
@@ -185,6 +190,10 @@ margin-top: 30px;
     margin-top: 60px;
 }
 
+.table-container
+{
+  width: 100%;
+}
 
 
 .lead {
@@ -216,13 +225,19 @@ margin-top: 30px;
      margin-bottom: 15px
 }
 
+ 
+
 }
 
-
+@media (min-width: 768px) {
+  .backsplash
+{
+background-image: url('../img/blancasvsnegras.png');
+background-repeat: no-repeat;
+}
+}
 
 .backsplash
 {
-  background-image: url('~/assets/img/blancasvsnegras.png');
-  background-repeat: no-repeat;
   background-color: white;
 }
