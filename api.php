@@ -2679,6 +2679,7 @@ class PHP_CRUD_API {
 			if ($output!==false) {
 				$this->startOutput();
 				echo json_encode($output);
+		
 			}
 			if ($parameters['after']) {
 				$this->applyAfterHandler($parameters,$output);
@@ -2722,21 +2723,72 @@ $api = new PHP_CRUD_API(array(
 	'username'=>'root',
 	'password'=>'',
 	'database'=>'ajedrez',
-	'charset'=>'utf8'
+	'charset'=>'utf8',
+	'after'=>'myCallback'
 ));
+$api->executeCommand();
 */
-
 //PROD
 
 $api = new PHP_CRUD_API(array(
 	'dbengine'=>'MySQL',
 	'hostname'=>'localhost',
 	'username'=>'ajedrez',
-	'password'=>'BwqhxLnfCfYtQXN4',
+	'password'=>'PAmfhTECRUbhJyBN',
 	'database'=>'ajedrez',
-	'charset'=>'utf8'
+	'charset'=>'utf8',
+	'after'=>'myCallback'
 ));
 $api->executeCommand();
+
+function myCallback ($cmd,$db,$tab,$id,$in,$out)
+{
+	if ($cmd=='create' && $tab=='inscripciones' && isset($out))
+	{
+		
+		$email=$in->email;
+		$colegio=$in->colegio;
+		$equipo=$in->equipo;
+		$phone=$in->phone;
+		$jugador1=$in->jugador1."(".$in->edad1.")";
+		$jugador2=$in->jugador2."(".$in->edad2.")";
+		$jugador3=$in->jugador3."(".$in->edad3.")";
+		$jugador4=$in->jugador4."(".$in->edad4.")";
+		
+
+
+		ob_start();
+		include('template.php');
+		$mensaje   = ob_get_contents();
+		ob_end_clean();
+ 
+		$titulo = "Inscripción en el I Torneo ajedrez infantil Utebo";
+	
+
+		$encoding = "utf-8";
+
+		// Preferences for Subject field
+		$subject_preferences = array(
+			"input-charset" => $encoding,
+			"output-charset" => $encoding,
+			"line-length" => 76,
+			"line-break-chars" => "\r\n"
+		);
+
+		$from_name='no-reply@utebo.com';
+
+		// Mail header
+		$header = "Content-type: text/html; charset=".$encoding." \r\n";
+		$header .= "From: ".$from_name." <".$from_name."> \r\n";
+		$header .= "MIME-Version: 1.0 \r\n";
+		$header .= "Content-Transfer-Encoding: 8bit \r\n";
+		$header .= "Date: ".date("r (T)")." \r\n";
+		$header .= iconv_mime_encode("Subject", $titulo, $subject_preferences);
+		
+		@mail($email, $titulo, $mensaje,$header);
+	}	
+}
+
 /*
 $api = new PHP_CRUD_API(array(
 	'dbengine'=>'MySQL',

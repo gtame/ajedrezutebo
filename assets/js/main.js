@@ -46,7 +46,6 @@ function showMessage(msg)
             type: "GET",
             url: urlAjax,
             beforeSend: function() { hideValidate($('#equipo')); },
-            complete: function() { console.log('completed'); },
             success: function(data) { if (data!=null && data.inscripciones.records.length>0)   { showValidate($('#equipo'));} },
             error: function(data) {showValidate($('#equipo')); },
             dataType: 'json'
@@ -70,7 +69,6 @@ function showMessage(msg)
             Object.assign(inscriptionData,  {"createdate":"1980-02-12","deletedflag":0,"updatedate":"2017-12-12"});
             
             
-            
              //crear nuevos registro via ajax
             $.ajax({
             type: "POST",
@@ -90,7 +88,7 @@ function showMessage(msg)
                 }
                 else
                 {
-                    showMessage('Ocurrio algun error en el proceso de inscripción');
+                    showMessage('Ocurrio algun error en el proceso de inscripción, verifique los errores de validación');
                 }
             },
             error: function(data) {alert("ajax error"); },
@@ -137,14 +135,13 @@ function showMessage(msg)
             "&phone="+ encodeURI(maildata.phone) + 
             "&mail="+ encodeURI(maildata.email) + 
             "&msj=" + encodeURI(maildata.message);
-            console.debug(urlAjax);
+            
             
              //crear nuevos registro via ajax
              $.ajax({
                 type: "GET",
                 url: urlAjax,
                 beforeSend: function() { hideValidate($('#equipo')); },
-                complete: function() { console.log('completed'); },
                 success: function(data) { 
                     
 
